@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 17.875, 17.25" name="RepaireDB">
+  <DataContextMoniker Name="/RepaireDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="789716f6-7c8f-4afa-827b-769d4acc428b" absoluteBounds="13.375, 7, 2, 1.5373050944010416">
+      <DataClassMoniker Name="/RepaireDBDataContext/comingback" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1eae5202-a259-4515-a6f0-f8fa82e16a7a" absoluteBounds="13.39, 7.46, 1.9700000000000002, 0.97730509440104174" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="994097a0-47cf-477c-a56f-cfe5c5e4e737" absoluteBounds="4.125, 5.5, 2, 1.5373050944010416">
+      <DataClassMoniker Name="/RepaireDBDataContext/engineerinfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="988f3eb2-fa16-432a-a1e3-a868793d565b" absoluteBounds="4.1400000000000006, 5.9600000000000009, 1.9700000000000002, 0.97730509440104174" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="24d79fa1-60c6-4fb1-84d2-987fe0d06a9a" absoluteBounds="7.75, 6.25, 2, 1.3525109863281251">
+      <DataClassMoniker Name="/RepaireDBDataContext/engineerrole" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a4594c00-12ff-4c90-9d07-7efa4737906b" absoluteBounds="7.7650000000000006, 6.7100000000000009, 1.9700000000000002, 0.792510986328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.75 : 6.64365254720052); (6.125 : 6.64365254720052)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/RepaireDBDataContext/engineerrole/engineerrole_engineerinfo" />
+      <nodes>
+        <classShapeMoniker Id="24d79fa1-60c6-4fb1-84d2-987fe0d06a9a" />
+        <classShapeMoniker Id="994097a0-47cf-477c-a56f-cfe5c5e4e737" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="2ad01542-13db-4287-98ef-68fc4d4a1515" absoluteBounds="4.125, 9.875, 2, 7.0811283365885407">
+      <DataClassMoniker Name="/RepaireDBDataContext/environmentlist" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9a2c06c6-a2c8-4f3e-bfb4-22d5b4beb357" absoluteBounds="4.1400000000000006, 10.335, 1.9700000000000002, 6.5211283365885411" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8a1cc128-e6be-4ca7-88b3-bddbfc645288" absoluteBounds="15.625, 7, 2, 1.3525109863281251">
+      <DataClassMoniker Name="/RepaireDBDataContext/repaireinfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3a995d14-ad3e-48f1-b364-cdf44b497929" absoluteBounds="15.64, 7.46, 1.9700000000000002, 0.792510986328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1ba5f1a5-ed3e-43dd-b03e-eaf16d4b0ef4" absoluteBounds="12.25, 3.625, 2, 2.8308638509114581">
+      <DataClassMoniker Name="/RepaireDBDataContext/jobinfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e1431aa6-cd7e-4d31-b8b0-6470e01ba6ac" absoluteBounds="12.265, 4.085, 1.9700000000000002, 2.270863850911458" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.125 : 5.84375); (12.25 : 5.84375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/RepaireDBDataContext/engineerinfo/engineerinfo_jobinfo" />
+      <nodes>
+        <classShapeMoniker Id="994097a0-47cf-477c-a56f-cfe5c5e4e737" />
+        <classShapeMoniker Id="1ba5f1a5-ed3e-43dd-b03e-eaf16d4b0ef4" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="5e57f0ae-e7e3-49d9-af6e-93f2a0c36a50" absoluteBounds="13.75, 10.25, 2, 3.7548343912760416">
+      <DataClassMoniker Name="/RepaireDBDataContext/repairelog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d1e15a35-c302-4002-9290-8f635f1ff25b" absoluteBounds="13.765, 10.71, 1.9700000000000002, 3.1948343912760415" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(14.5625 : 8.53730509440104); (14.5625 : 10.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/RepaireDBDataContext/comingback/comingback_repairelog" />
+      <nodes>
+        <classShapeMoniker Id="789716f6-7c8f-4afa-827b-769d4acc428b" />
+        <classShapeMoniker Id="5e57f0ae-e7e3-49d9-af6e-93f2a0c36a50" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(16.6875005 : 8.35251098632813); (16.6875005 : 12.127417195638); (15.75 : 12.127417195638)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/RepaireDBDataContext/repaireinfo/repaireinfo_repairelog" />
+      <nodes>
+        <classShapeMoniker Id="8a1cc128-e6be-4ca7-88b3-bddbfc645288" />
+        <classShapeMoniker Id="5e57f0ae-e7e3-49d9-af6e-93f2a0c36a50" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a6ef4bd7-2304-48de-b613-059e1c24c80d" absoluteBounds="7.75, 3.875, 2, 1.5373050944010416">
+      <DataClassMoniker Name="/RepaireDBDataContext/riginfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3109f50c-7f31-4726-8720-955a46f3aaf9" absoluteBounds="7.765, 4.335, 1.9700000000000002, 0.97730509440104174" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(9.75 : 4.64365254720052); (12.25 : 4.64365254720052)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/RepaireDBDataContext/riginfo/riginfo_jobinfo" />
+      <nodes>
+        <classShapeMoniker Id="a6ef4bd7-2304-48de-b613-059e1c24c80d" />
+        <classShapeMoniker Id="1ba5f1a5-ed3e-43dd-b03e-eaf16d4b0ef4" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="839c6d6a-73da-4ff7-9c61-84e65f120f0e" absoluteBounds="7.625, 13.875, 2, 1.5373050944010416">
+      <DataClassMoniker Name="/RepaireDBDataContext/toolinginfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dbb14a70-8fac-4816-8791-bb95d1e74433" absoluteBounds="7.6400000000000006, 14.335, 1.9700000000000002, 0.97730509440104174" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="16432abb-6dee-4da9-8720-b118e983fca3" absoluteBounds="10.25, 13.25, 2, 2.2764815266927085">
+      <DataClassMoniker Name="/RepaireDBDataContext/toolinglist" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9632aa9e-a55d-4c2f-99d3-63e4bfc4e6b5" absoluteBounds="10.265, 13.71, 1.9700000000000002, 1.7164815266927085" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(9.625 : 14.6436525472005); (10.25 : 14.6436525472005)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/RepaireDBDataContext/toolinginfo/toolinginfo_toolinglist" />
+      <nodes>
+        <classShapeMoniker Id="839c6d6a-73da-4ff7-9c61-84e65f120f0e" />
+        <classShapeMoniker Id="16432abb-6dee-4da9-8720-b118e983fca3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.625 : 14.1968262736003); (10.25 : 14.1968262736003)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/RepaireDBDataContext/toolinginfo/toolinginfo_toolinglist1" />
+      <nodes>
+        <classShapeMoniker Id="839c6d6a-73da-4ff7-9c61-84e65f120f0e" />
+        <classShapeMoniker Id="16432abb-6dee-4da9-8720-b118e983fca3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.625 : 15.0904788208008); (10.25 : 15.0904788208008)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/RepaireDBDataContext/toolinginfo/toolinginfo_toolinglist2" />
+      <nodes>
+        <classShapeMoniker Id="839c6d6a-73da-4ff7-9c61-84e65f120f0e" />
+        <classShapeMoniker Id="16432abb-6dee-4da9-8720-b118e983fca3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.625 : 14.8670656840007); (10.25 : 14.8670656840007)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/RepaireDBDataContext/toolinginfo/toolinginfo_toolinglist3" />
+      <nodes>
+        <classShapeMoniker Id="839c6d6a-73da-4ff7-9c61-84e65f120f0e" />
+        <classShapeMoniker Id="16432abb-6dee-4da9-8720-b118e983fca3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.625 : 14.4202394104004); (10.25 : 14.4202394104004)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/RepaireDBDataContext/toolinginfo/toolinginfo_toolinglist4" />
+      <nodes>
+        <classShapeMoniker Id="839c6d6a-73da-4ff7-9c61-84e65f120f0e" />
+        <classShapeMoniker Id="16432abb-6dee-4da9-8720-b118e983fca3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.625 : 13.9734131368001); (10.25 : 13.9734131368001)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/RepaireDBDataContext/toolinginfo/toolinginfo_toolinglist5" />
+      <nodes>
+        <classShapeMoniker Id="839c6d6a-73da-4ff7-9c61-84e65f120f0e" />
+        <classShapeMoniker Id="16432abb-6dee-4da9-8720-b118e983fca3" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="f665089d-870f-48d1-a0af-472e962e541b" absoluteBounds="10.25, 8.625, 2, 3.5700402832031246">
+      <DataClassMoniker Name="/RepaireDBDataContext/uselog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fd971053-e6b2-4f93-aeb5-caca2160f402" absoluteBounds="10.265, 9.085, 1.9700000000000002, 3.010040283203125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(12.25 : 11.2225201416016); (13.75 : 11.2225201416016)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/RepaireDBDataContext/uselog/uselog_repairelog" />
+      <nodes>
+        <classShapeMoniker Id="f665089d-870f-48d1-a0af-472e962e541b" />
+        <classShapeMoniker Id="5e57f0ae-e7e3-49d9-af6e-93f2a0c36a50" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.125 : 11.0350201416016); (10.25 : 11.0350201416016)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/RepaireDBDataContext/environmentlist/environmentlist_uselog" />
+      <nodes>
+        <classShapeMoniker Id="2ad01542-13db-4287-98ef-68fc4d4a1515" />
+        <classShapeMoniker Id="f665089d-870f-48d1-a0af-472e962e541b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(12.8125 : 6.45586385091146); (12.8125 : 9.40625); (12.25 : 9.40625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/RepaireDBDataContext/jobinfo/jobinfo_uselog" />
+      <nodes>
+        <classShapeMoniker Id="1ba5f1a5-ed3e-43dd-b03e-eaf16d4b0ef4" />
+        <classShapeMoniker Id="f665089d-870f-48d1-a0af-472e962e541b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 13.25); (11.25 : 12.1950402832031)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/RepaireDBDataContext/toolinglist/toolinglist_uselog" />
+      <nodes>
+        <classShapeMoniker Id="16432abb-6dee-4da9-8720-b118e983fca3" />
+        <classShapeMoniker Id="f665089d-870f-48d1-a0af-472e962e541b" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ffd35c98-8a97-46cf-9f08-cac024a275f7" absoluteBounds="4.125, 7.75, 2, 1.7220992024739581">
+      <DataClassMoniker Name="/RepaireDBDataContext/userinfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ff8b2c25-4ea2-41aa-82b5-fc32f80aea43" absoluteBounds="4.14, 8.21, 1.9700000000000002, 1.1620992024739583" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.125 : 7.75); (5.125 : 7.03730509440104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/RepaireDBDataContext/userinfo/userinfo_engineerinfo" />
+      <nodes>
+        <classShapeMoniker Id="ffd35c98-8a97-46cf-9f08-cac024a275f7" />
+        <classShapeMoniker Id="994097a0-47cf-477c-a56f-cfe5c5e4e737" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="2c424458-4825-4e91-b0c2-bfb51c7a0ab0" absoluteBounds="7.75, 8, 2, 1.3525109863281251">
+      <DataClassMoniker Name="/RepaireDBDataContext/userrole" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c8ce3f2a-cd94-4217-a7dc-10933e08d6f5" absoluteBounds="7.765, 8.46, 1.9700000000000002, 0.792510986328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.75 : 8.67625549316406); (6.125 : 8.67625549316406)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/RepaireDBDataContext/userrole/userrole_userinfo" />
+      <nodes>
+        <classShapeMoniker Id="2c424458-4825-4e91-b0c2-bfb51c7a0ab0" />
+        <classShapeMoniker Id="ffd35c98-8a97-46cf-9f08-cac024a275f7" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="85547066-f223-4639-b5c1-343739df4a45" absoluteBounds="15.5, 2.5, 2, 4.1244226074218746">
+      <DataClassMoniker Name="/RepaireDBDataContext/wellinfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="db4b4321-3e07-4a95-a1ad-e25f78324bf4" absoluteBounds="15.515, 2.96, 1.9700000000000002, 3.564422607421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(15.5 : 5.04043192545573); (14.25 : 5.04043192545573)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/RepaireDBDataContext/wellinfo/wellinfo_jobinfo" />
+      <nodes>
+        <classShapeMoniker Id="85547066-f223-4639-b5c1-343739df4a45" />
+        <classShapeMoniker Id="1ba5f1a5-ed3e-43dd-b03e-eaf16d4b0ef4" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

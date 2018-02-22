@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="RepaireDB" Class="RepaireDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-UD25JEC\SQLEXPRESS;Initial Catalog=RepaireDB;Integrated Security=True" SettingsObjectName="RepaireEntity.Properties.Settings" SettingsPropertyName="RepaireDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.comingback" Member="comingback">
+    <Type Name="comingback">
+      <Column Name="ComingbackSEQUENCE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ComingbackID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ComingbackLOCATION" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="ComingbackIMG" Type="System.Data.Linq.Binary" DbType="Image NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="comingback_repairelog" Member="repairelog" ThisKey="ComingbackID" OtherKey="ComingbackID" Type="repairelog" />
+    </Type>
+  </Table>
+  <Table Name="dbo.engineerinfo" Member="engineerinfo">
+    <Type Name="engineerinfo">
+      <Column Name="EngineerSEQUENCE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EngineerID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ERoleID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="engineerinfo_jobinfo" Member="jobinfo" ThisKey="EngineerID" OtherKey="EngineerID" Type="jobinfo" />
+      <Association Name="engineerrole_engineerinfo" Member="engineerrole" ThisKey="ERoleID" OtherKey="ERoleID" Type="engineerrole" IsForeignKey="true" />
+      <Association Name="userinfo_engineerinfo" Member="userinfo" ThisKey="UserID" OtherKey="UserID" Type="userinfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.engineerrole" Member="engineerrole">
+    <Type Name="engineerrole">
+      <Column Name="ERoleSEQUENCE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ERoleID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ERoleNAME" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="engineerrole_engineerinfo" Member="engineerinfo" ThisKey="ERoleID" OtherKey="ERoleID" Type="engineerinfo" />
+    </Type>
+  </Table>
+  <Table Name="dbo.environmentlist" Member="environmentlist">
+    <Type Name="environmentlist">
+      <Column Name="EnvironmentSEQUENCE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EnvironmentID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LV1" Type="System.Decimal" DbType="Decimal(5,2) NOT NULL" CanBeNull="false" />
+      <Column Name="LV2" Type="System.Decimal" DbType="Decimal(5,2) NOT NULL" CanBeNull="false" />
+      <Column Name="LV3" Type="System.Decimal" DbType="Decimal(5,2) NOT NULL" CanBeNull="false" />
+      <Column Name="LV4" Type="System.Decimal" DbType="Decimal(5,2) NOT NULL" CanBeNull="false" />
+      <Column Name="LV5" Type="System.Decimal" DbType="Decimal(5,2) NOT NULL" CanBeNull="false" />
+      <Column Name="LV6" Type="System.Decimal" DbType="Decimal(5,2) NOT NULL" CanBeNull="false" />
+      <Column Name="LV7" Type="System.Decimal" DbType="Decimal(5,2) NOT NULL" CanBeNull="false" />
+      <Column Name="LV8" Type="System.Decimal" DbType="Decimal(5,2) NOT NULL" CanBeNull="false" />
+      <Column Name="SS1" Type="System.Decimal" DbType="Decimal(5,2) NOT NULL" CanBeNull="false" />
+      <Column Name="SS2" Type="System.Decimal" DbType="Decimal(5,2) NOT NULL" CanBeNull="false" />
+      <Column Name="SS3" Type="System.Decimal" DbType="Decimal(5,2) NOT NULL" CanBeNull="false" />
+      <Column Name="SS4" Type="System.Decimal" DbType="Decimal(5,2) NOT NULL" CanBeNull="false" />
+      <Column Name="SS5" Type="System.Decimal" DbType="Decimal(5,2) NOT NULL" CanBeNull="false" />
+      <Column Name="SS6" Type="System.Decimal" DbType="Decimal(5,2) NOT NULL" CanBeNull="false" />
+      <Column Name="SS7" Type="System.Decimal" DbType="Decimal(5,2) NOT NULL" CanBeNull="false" />
+      <Column Name="SS8" Type="System.Decimal" DbType="Decimal(5,2) NOT NULL" CanBeNull="false" />
+      <Column Name="AV1" Type="System.Decimal" DbType="Decimal(5,2) NOT NULL" CanBeNull="false" />
+      <Column Name="AV2" Type="System.Decimal" DbType="Decimal(5,2) NOT NULL" CanBeNull="false" />
+      <Column Name="AV3" Type="System.Decimal" DbType="Decimal(5,2) NOT NULL" CanBeNull="false" />
+      <Column Name="AV4" Type="System.Decimal" DbType="Decimal(5,2) NOT NULL" CanBeNull="false" />
+      <Column Name="AV5" Type="System.Decimal" DbType="Decimal(5,2) NOT NULL" CanBeNull="false" />
+      <Column Name="AV6" Type="System.Decimal" DbType="Decimal(5,2) NOT NULL" CanBeNull="false" />
+      <Column Name="AV7" Type="System.Decimal" DbType="Decimal(5,2) NOT NULL" CanBeNull="false" />
+      <Column Name="AV8" Type="System.Decimal" DbType="Decimal(5,2) NOT NULL" CanBeNull="false" />
+      <Column Name="TMP1" Type="System.Decimal" DbType="Decimal(5,2) NOT NULL" CanBeNull="false" />
+      <Column Name="TMP2" Type="System.Decimal" DbType="Decimal(5,2) NOT NULL" CanBeNull="false" />
+      <Column Name="TMP3" Type="System.Decimal" DbType="Decimal(5,2) NOT NULL" CanBeNull="false" />
+      <Column Name="TMP4" Type="System.Decimal" DbType="Decimal(5,2) NOT NULL" CanBeNull="false" />
+      <Column Name="TMP5" Type="System.Decimal" DbType="Decimal(5,2) NOT NULL" CanBeNull="false" />
+      <Column Name="TMP6" Type="System.Decimal" DbType="Decimal(5,2) NOT NULL" CanBeNull="false" />
+      <Column Name="TMP7" Type="System.Decimal" DbType="Decimal(5,2) NOT NULL" CanBeNull="false" />
+      <Column Name="TMP8" Type="System.Decimal" DbType="Decimal(5,2) NOT NULL" CanBeNull="false" />
+      <Association Name="environmentlist_uselog" Member="uselog" ThisKey="EnvironmentID" OtherKey="EnvironmentID" Type="uselog" />
+    </Type>
+  </Table>
+  <Table Name="dbo.repaireinfo" Member="repaireinfo">
+    <Type Name="repaireinfo">
+      <Column Name="RepaireplanSEQUENCE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RepaireplanID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RepaireplanTYPE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="repaireinfo_repairelog" Member="repairelog" ThisKey="RepaireplanID" OtherKey="RepaireplanID" Type="repairelog" />
+    </Type>
+  </Table>
+  <Table Name="dbo.jobinfo" Member="jobinfo">
+    <Type Name="jobinfo">
+      <Column Name="UJobSEQUENCE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UJobID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="JobNAME" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="JobCONTENT" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="JobSTATE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="JobREMARK" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EngineerID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FieldID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RigID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="WellID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="JobCONDITION" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="jobinfo_uselog" Member="uselog" ThisKey="UJobID" OtherKey="UJobID" Type="uselog" />
+      <Association Name="engineerinfo_jobinfo" Member="engineerinfo" ThisKey="EngineerID" OtherKey="EngineerID" Type="engineerinfo" IsForeignKey="true" />
+      <Association Name="riginfo_jobinfo" Member="riginfo" ThisKey="RigID" OtherKey="RigID" Type="riginfo" IsForeignKey="true" />
+      <Association Name="wellinfo_jobinfo" Member="wellinfo" ThisKey="WellID" OtherKey="WellID" Type="wellinfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.repairelog" Member="repairelog">
+    <Type Name="repairelog">
+      <Column Name="RepaireSEQUENCE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RepaireID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ComingbackID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RepaireplanID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UseID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FaultID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ComingcheckID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProcesscontrolID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RepairLEVEL" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CheckRE" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="REreportID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaterielID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ConfirmationslipID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="InstallcontrolID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FinalcheckID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LogisticsID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="comingback_repairelog" Member="comingback" ThisKey="ComingbackID" OtherKey="ComingbackID" Type="comingback" IsForeignKey="true" />
+      <Association Name="repaireinfo_repairelog" Member="repaireinfo" ThisKey="RepaireplanID" OtherKey="RepaireplanID" Type="repaireinfo" IsForeignKey="true" />
+      <Association Name="uselog_repairelog" Member="uselog" ThisKey="UseID" OtherKey="UseID" Type="uselog" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.riginfo" Member="riginfo">
+    <Type Name="riginfo">
+      <Column Name="RigSEQUENCE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RigID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RigNAME" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="RigLOCATION" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="riginfo_jobinfo" Member="jobinfo" ThisKey="RigID" OtherKey="RigID" Type="jobinfo" />
+    </Type>
+  </Table>
+  <Table Name="dbo.toolinginfo" Member="toolinginfo">
+    <Type Name="toolinginfo">
+      <Column Name="ToolingSEQUENCE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ToolingID" Type="System.Decimal" DbType="Decimal(8,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ToolingNAME" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="ToolingSIZE" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Association Name="toolinginfo_toolinglist" Member="toolinglist" ThisKey="ToolingID" OtherKey="Tooling1" Type="toolinglist" />
+      <Association Name="toolinginfo_toolinglist1" Member="toolinglist1" ThisKey="ToolingID" OtherKey="Tooling2" Type="toolinglist" />
+      <Association Name="toolinginfo_toolinglist2" Member="toolinglist2" ThisKey="ToolingID" OtherKey="Tooling3" Type="toolinglist" />
+      <Association Name="toolinginfo_toolinglist3" Member="toolinglist3" ThisKey="ToolingID" OtherKey="Tooling4" Type="toolinglist" />
+      <Association Name="toolinginfo_toolinglist4" Member="toolinglist4" ThisKey="ToolingID" OtherKey="Tooling5" Type="toolinglist" />
+      <Association Name="toolinginfo_toolinglist5" Member="toolinglist5" ThisKey="ToolingID" OtherKey="Tooling6" Type="toolinglist" />
+    </Type>
+  </Table>
+  <Table Name="dbo.toolinglist" Member="toolinglist">
+    <Type Name="toolinglist">
+      <Column Name="TListSEQUENCE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BHA" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Tooling1" Type="System.Decimal" DbType="Decimal(8,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Tooling2" Type="System.Decimal" DbType="Decimal(8,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Tooling3" Type="System.Decimal" DbType="Decimal(8,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Tooling4" Type="System.Decimal" DbType="Decimal(8,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Tooling5" Type="System.Decimal" DbType="Decimal(8,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Tooling6" Type="System.Decimal" DbType="Decimal(8,0) NOT NULL" CanBeNull="false" />
+      <Association Name="toolinglist_uselog" Member="uselog" ThisKey="BHA" OtherKey="BHA" Type="uselog" />
+      <Association Name="toolinginfo_toolinglist" Member="toolinginfo" ThisKey="Tooling1" OtherKey="ToolingID" Type="toolinginfo" IsForeignKey="true" />
+      <Association Name="toolinginfo_toolinglist1" Member="toolinginfo1" ThisKey="Tooling2" OtherKey="ToolingID" Type="toolinginfo" IsForeignKey="true" />
+      <Association Name="toolinginfo_toolinglist2" Member="toolinginfo2" ThisKey="Tooling3" OtherKey="ToolingID" Type="toolinginfo" IsForeignKey="true" />
+      <Association Name="toolinginfo_toolinglist3" Member="toolinginfo3" ThisKey="Tooling4" OtherKey="ToolingID" Type="toolinginfo" IsForeignKey="true" />
+      <Association Name="toolinginfo_toolinglist4" Member="toolinginfo4" ThisKey="Tooling5" OtherKey="ToolingID" Type="toolinginfo" IsForeignKey="true" />
+      <Association Name="toolinginfo_toolinglist5" Member="toolinginfo5" ThisKey="Tooling6" OtherKey="ToolingID" Type="toolinginfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.uselog" Member="uselog">
+    <Type Name="uselog">
+      <Column Name="ULogSEQUENCE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UseID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UJobID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateIN" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="TimeIN" Type="System.TimeSpan" DbType="Time NOT NULL" CanBeNull="false" />
+      <Column Name="DateOUT" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="TimeOUT" Type="System.TimeSpan" DbType="Time NOT NULL" CanBeNull="false" />
+      <Column Name="Circulating" Type="System.Decimal" DbType="Decimal(10,1) NOT NULL" CanBeNull="false" />
+      <Column Name="Drilling" Type="System.Decimal" DbType="Decimal(10,1) NOT NULL" CanBeNull="false" />
+      <Column Name="BRT" Type="System.Decimal" DbType="Decimal(10,1) NOT NULL" CanBeNull="false" />
+      <Column Name="DepthIN" Type="System.Decimal" DbType="Decimal(6,2) NOT NULL" CanBeNull="false" />
+      <Column Name="DepthOUT" Type="System.Decimal" DbType="Decimal(6,2) NOT NULL" CanBeNull="false" />
+      <Column Name="DistanceDrilled" Type="System.Decimal" DbType="Decimal(6,2) NOT NULL" CanBeNull="false" />
+      <Column Name="BHA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EnvironmentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="uselog_repairelog" Member="repairelog" ThisKey="UseID" OtherKey="UseID" Type="repairelog" />
+      <Association Name="environmentlist_uselog" Member="environmentlist" ThisKey="EnvironmentID" OtherKey="EnvironmentID" Type="environmentlist" IsForeignKey="true" />
+      <Association Name="jobinfo_uselog" Member="jobinfo" ThisKey="UJobID" OtherKey="UJobID" Type="jobinfo" IsForeignKey="true" />
+      <Association Name="toolinglist_uselog" Member="toolinglist" ThisKey="BHA" OtherKey="BHA" Type="toolinglist" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.userinfo" Member="userinfo">
+    <Type Name="userinfo">
+      <Column Name="UserSEQUENCE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserPASS" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="UserNAME" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="URoleID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="userinfo_engineerinfo" Member="engineerinfo" ThisKey="UserID" OtherKey="UserID" Type="engineerinfo" />
+      <Association Name="userrole_userinfo" Member="userrole" ThisKey="URoleID" OtherKey="URoleID" Type="userrole" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.userrole" Member="userrole">
+    <Type Name="userrole">
+      <Column Name="URoleSEQUENCE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="URoleID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="URoleNAME" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="userrole_userinfo" Member="userinfo" ThisKey="URoleID" OtherKey="URoleID" Type="userinfo" />
+    </Type>
+  </Table>
+  <Table Name="dbo.wellinfo" Member="wellinfo">
+    <Type Name="wellinfo">
+      <Column Name="WellSEQUENCE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="WellID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="WellNAME" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="WellLOCATION" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="HoleSIZE" Type="System.Decimal" DbType="Decimal(3,2) NOT NULL" CanBeNull="false" />
+      <Column Name="RotatedDLS" Type="System.Decimal" DbType="Decimal(3,2) NOT NULL" CanBeNull="false" />
+      <Column Name="SandContent" Type="System.Decimal" DbType="Decimal(3,2) NOT NULL" CanBeNull="false" />
+      <Column Name="MaxRPM" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AvgRPM" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaxPRESSURE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaxFLOWRATE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AvgFLOWRATE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MinFLOWRATE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaxINC" Type="System.Decimal" DbType="Decimal(4,2) NOT NULL" CanBeNull="false" />
+      <Column Name="MinINC" Type="System.Decimal" DbType="Decimal(4,2) NOT NULL" CanBeNull="false" />
+      <Column Name="MudType" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="MudPH" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="WaterOil" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="wellinfo_jobinfo" Member="jobinfo" ThisKey="WellID" OtherKey="WellID" Type="jobinfo" />
+    </Type>
+  </Table>
+</Database>
